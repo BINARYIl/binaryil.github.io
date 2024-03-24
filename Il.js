@@ -8,7 +8,7 @@ const binaryToIl = (text) => text.replace(/1/g, 'I').replace(/0/g, 'l');
 const IlTobinary = (text) => text.replace(/I/g, '1').replace(/l/g, '0');
 
 const textToIl = (text) => textToBinary(text).replace(/1/g, 'I').replace(/0/g, 'l');
-const IlTotext = (text) => binaryToText(text).replace(/I/g, '1').replace(/l/g, '0');
+const IlTotext = (text) => binaryToText(text.replace(/I/g, '1').replace(/l/g, '0'));
 
 
 
