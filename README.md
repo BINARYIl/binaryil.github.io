@@ -1,7 +1,7 @@
 # Binary Il
 
 <p align="center">
-<img style="border-radius: 50%" src="https://github.com/BINARYIl/binaryil.github.io/assets/66713844/8465ccf2-d448-4ffd-83e2-6d82e5530cf2" align="center" width="200px" />
+<img style="border-radius: 50%" src="https://github.com/BINARYIl.png" align="center" width="200px" />
 </p>
 
 ## URL to Il Converter
