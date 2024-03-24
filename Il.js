@@ -10,7 +10,7 @@ const textToIl = (text) => textToBinary(text).replace(/1/g, 'I').replace(/0/g, '
 const IlTotext = (text) => binaryToText(text.replace(/I/g, '1').replace(/l/g, '0'));
 
 
-const isNotURL = str => !/^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/.test(str);
-const isNotURL_ = str => !/^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/.test(str) || str.includes(' ');
+var isNotURL = str => !/^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/.test(str);
+var isNotURL_ = str => !/^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/.test(str) || str.includes(' ');
 
 

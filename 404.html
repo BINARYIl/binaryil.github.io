@@ -11,10 +11,12 @@
 
     <script src="Il.js"></script>
     <script>
+        var isNotURL_ = str => !/^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/.test(str) || str.includes(' ');
+
         let url = location.pathname.substring(1); // Remove the first slash from URL path
         url = IlTotext(url)
         if (isNotURL_(url)) { 
-            document.write(url) 
+            document.body.innerHTML = (url) ;
         }
         else {
             location.href = url;
