@@ -6,6 +6,8 @@ document.getElementById('conversionForm').addEventListener('submit', function(ev
   let binary = textToBinary(urlInput);
   let ilFormat = binaryToIl(binary);
   document.getElementById('ilOutput').textContent = ilFormat;
+  document.getElementById('url').textContent = "https://binaryil.github.io/"+ilFormat;
+  
 });
 
 document.getElementById('decodeForm').addEventListener('submit', function(event) {
