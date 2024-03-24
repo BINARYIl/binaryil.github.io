@@ -1,4 +1,5 @@
 # Binary Il
+<a href="https://visitorbadge.io/status?path=https://github.com/BINARYIl/binaryil.github.io/"><img loading="lazy" class="inline-block" src="https://api.visitorbadge.io/api/visitors?path=https://github.com/BINARYIl/binaryil.github.io/"></a>
 
 <p align="center">
 <img style="border-radius: 50%" src="https://github.com/BINARYIl.png" align="center" width="200px" />
