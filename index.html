@@ -2,47 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL to Il Converter - Binary Il by SH20RAJ</title>
   <!-- Integrate Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="https://github.com/binaryil.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7fafc;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .form-label {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .form-input {
+      padding: 8px;
+      border: 1px solid #d2d6dc;
+      border-radius: 4px;
+      width: 100%;
+      margin-top: 5px;
+      transition: border-color 0.3s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #3182ce;
+    }
+    .form-button {
+      background-color: #3182ce;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-button:hover {
+      background-color: #2c5282;
+    }
+    .result {
+      background-color: #edf2f7;
+      padding: 20px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+    .url-bar {
+      margin-top: 20px;
+    }
+    .url-output {
+      background-color: #edf2f7;
+      padding: 20px;
+      border-radius: 4px;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 p-6">
+<body>
 
+<div class="container">
   <h1 class="text-4xl font-bold text-center mb-8">URL to Il Converter</h1>
 
   <!-- Encoding Form -->
-  <form id="conversionForm" class="flex flex-col items-center space-y-4 mb-8">
-    <label for="urlInput" class="text-lg font-medium">Enter URL:</label>
-    <input type="text" id="urlInput" name="urlInput" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 w-full md:w-96">
-    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mt-2 transition duration-300">Convert</button>
+  <form id="conversionForm" class="mb-8">
+    <label for="urlInput" class="form-label">Enter URL:</label>
+    <input type="text" id="urlInput" name="urlInput" class="form-input">
+    <button type="submit" class="form-button mt-2">Convert</button>
   </form>
 
   <!-- Encoding Result -->
-  <div id="ilOutput" class="text-lg font-medium text-center bg-gray-200 p-4 rounded-lg mb-8"></div>
+  <div id="ilOutput" class="result text-lg font-medium text-center"></div>
 
   <!-- Decoding Form -->
   <h2 class="text-2xl font-bold text-center mb-4">Il to URL Decoder</h2>
-  <form id="decodeForm" class="flex flex-col items-center space-y-4">
-    <label for="ilInput" class="text-lg font-medium">Enter Il:</label>
-    <input type="text" id="ilInput" name="ilInput" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 w-full md:w-96">
-    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mt-2 transition duration-300">Decode</button>
+  <form id="decodeForm" class="mb-8">
+    <label for="ilInput" class="form-label">Enter Il:</label>
+    <input type="text" id="ilInput" name="ilInput" class="form-input">
+    <button type="submit" class="form-button mt-2">Decode</button>
   </form>
 
   <!-- Decoding Result -->
-  <div id="decodedOutput" class="text-lg font-medium text-center bg-gray-200 p-4 rounded-lg"></div>
+  <div id="decodedOutput" class="result text-lg font-medium text-center"></div>
 
-
+  <!-- Additional Feature: Redirect Link Generator -->
   <hr>
   <blockquote class="mt-4">
     You can use any string instead of URL
   </blockquote>
   <div class="url-bar mt-4">
-    <div class="text-lg font-medium text-center bg-gray-200 p-4 rounded-lg" id="url">https://binaryil.github.io/</div>
+    <div class="url-output text-lg font-medium text-center bg-gray-200 p-4 rounded-lg" id="url">https://binaryil.github.io/</div>
+    <button class="form-button mt-2 mx-auto block">Generate Redirect Link</button>
   </div>
+</div>
 
-  <!-- JavaScript Files -->
-  <script src="Il.js" defer></script>
-  <script src="script.js" defer></script>
+<!-- JavaScript Files -->
+<script src="Il.js" ></script>
+<script src="script.js" ></script>
+
 </body>
 </html>
