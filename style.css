@@ -1,3 +1,7 @@
 * {
     font-family:  sans-serif ;
 }
+
+.url-output {
+    user-select: all;
+}
